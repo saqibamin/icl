@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rounded Borders and Overflows</title>
+	<style type="text/css">
+		.rounded-box {
+			border: 2px solid #cb0009;
+			text-align: center;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+		.rounded-box img {
+			width: 100%;
+			display: block;
+			/* border-radius: 20px; */
+		}
+		/* display:
+				inline;
+				block;
+				inline-block;
+		*/
+		.btn {
+			display: inline-block;
+			border: 1px solid #000;
+			margin: 10px 0;
+			text-decoration: none;
+			padding: 10px 30px;
+			color: #000;
+			border-radius: 4px;
+			text-transform: uppercase;
+			transition: all 0.2s;
+		}
+		.btn:hover {
+			background: #f0f0f0;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="rounded-box">
+		<img src="images/girl.gif">
+	</div>
+	
+	<a class="btn" href="navs.html">Goto Navigation</a>
+</body>
+</html>

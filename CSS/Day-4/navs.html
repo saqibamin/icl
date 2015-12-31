@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigations</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		.nav {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background: #cb0009;
+			border-bottom: 2px solid #670307;
+		}
+		.nav li {
+			display: inline-block;
+			position: relative;
+		}
+		.nav a {
+			color: #fff;
+			display: block;
+			padding: 5px 10px;
+		}
+		.nav a:hover {
+			background-color: #670307;
+		}
+		.nav ul {
+			position: absolute;
+			background: #cb0009;
+			margin: 0;
+			padding: 0;
+			display: none;
+			width: 150px;
+		}
+		.nav ul li {
+			display: block;
+			width: 100%;
+		}
+		.nav li:hover ul {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	
+	<ul class="nav">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="about.html">About</a></li>
+		<li>
+			<a href="branches.html">Our Branches</a>
+			<ul>
+				<li>
+					<a href="#">Pakistan</a>
+					<ul>
+						<li><a href="#">Islamabad</a></li>
+						<li><a href="#">Peshawar</a></li>
+						<li><a href="#">Karachi</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Canada</a></li>
+			</ul>
+		</li>
+		<li><a href="countries.html">Countries</a></li>
+	</ul>
+
+</body>
+</html>

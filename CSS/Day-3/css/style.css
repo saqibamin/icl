@@ -1,0 +1,8 @@
+body {
+	/* background-color: #ddd;
+	background-image: url(images/gradient.jpg);
+	background-repeat: no-repeat;
+	background-position: 10px 10px; */
+	
+	background: url(../images/gradient-repeat.jpg) repeat-x #fff;
+}

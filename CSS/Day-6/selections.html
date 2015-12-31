@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>More Selections</title>
+	<style type="text/css">
+		/*
+			ID: #idname
+			Class: .classname
+			tag: tagname
+			Parent Child: selector selector
+			Direct Descendents: selector > selector
+			Attribute Selection:
+					selector[attribute_name=value]
+					selector[attribute_name$=value] --match attribute_name with value ending with 'value'
+					selector[attribute_name^=value] --match attribute_name with value starting with 'value'
+					selector[attribute_name*=value] --match attribute_name with value having substring 'value'
+			Siblings Selector
+		*/
+		h1 + p {
+			background-color: #ddd;
+		} 
+		h1 + p {
+			background-color: #2196f3;
+		}
+		input {
+			border: 1px solid #000;
+		}
+
+		input[type=password] {
+			border-color: #cb0009;
+		}
+		div[data-type*="-type-"] {
+			width: 100px;
+			height: 100px;
+			background-color: #000;
+			margin: 10px 0;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<h1>Lorem Ipsum</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, aspernatur.</p>
+		<p>Odit distinctio soluta ea et non veniam, fugiat doloribus. Nihil.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, amet?</p>
+		<h3>Lorem ipsum dolor.</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, suscipit.</p>
+	</div>
+	
+	<input type="text" >
+	<input type="email" >
+	<input type="password" >
+	
+	<div data-type="type-1">
+		x
+	</div>
+	<div data-type="type-2">
+		y
+	</div>
+	<div data-type="some-type-here">
+		
+	</div>
+	<div data-type="another-type">
+		xyz
+	</div>
+</body>
+</html>

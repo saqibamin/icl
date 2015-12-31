@@ -1,0 +1,56 @@
+body {
+	margin: 0;
+}
+.clear {
+	clear: both;
+}
+.wrapper {
+	width: 960px;
+	height: 600px;
+	margin: 0 auto;
+	background: #ddd;
+}
+.logo {
+	width: 30%;
+	height: 100px;
+	background-color: #aaa;
+	float: left;
+}
+.header-banner {
+	width: 70%;
+	height: 100px;
+	background-color: #eee;
+	float:  left;
+}
+.banner {
+	width: 100%;
+	height: 100px;
+	background-color: #333;
+}
+.left-sidebar {
+	width: 30%;
+	height: 350px;
+	background-color: #111; 
+	float: left;
+}
+.content-wrapper {
+	width: 70%;
+	height: 350px;
+	background-color: #555;
+	float: left;
+}
+.content-banner {
+	width: 100%;
+	height: 50px;
+	background-color: #000;
+}
+.content {
+	width: 100%;
+	height: 300px;
+	background-color: #cb0009; 
+}
+.copyright {
+	width: 100%;
+	height: 50px;
+	background-color: #ff4;
+}

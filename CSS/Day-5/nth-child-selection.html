@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nth-Child Selection</title>
+	<style type="text/css">
+		table {
+			border: 1px solid #000;
+			border-collapse: collapse;
+		}
+		table td {
+			border: 1px solid #000;
+		}
+		/* table tr:first-child {
+			background: #ddd;
+		}
+		table tr:last-child {
+			background: #ff0;
+		}
+		table tr:nth-child(3) {
+			background: #2196f3;
+		} */		
+		
+		
+		/* Odd Selection */
+		table tr:nth-child(2n+1) {
+			background: #2196f3;
+		}
+		/* Even Selection */
+		table tr:nth-child(2n) {
+			background: #ddd;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Amet, officia, natus.</td>
+			<td>Culpa, amet totam.</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Amet vero, veritatis.</td>
+			<td>Odit, repellat, laborum!</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Dolores ipsam, magnam.</td>
+			<td>Quas, amet, voluptatum.</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Ea, suscipit eligendi.</td>
+			<td>Omnis, aut, rerum!</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Amet, officia, natus.</td>
+			<td>Culpa, amet totam.</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Amet vero, veritatis.</td>
+			<td>Odit, repellat, laborum!</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Dolores ipsam, magnam.</td>
+			<td>Quas, amet, voluptatum.</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor.</td>
+			<td>Ea, suscipit eligendi.</td>
+			<td>Omnis, aut, rerum!</td>
+		</tr>
+	</table>
+
+</body>
+</html>

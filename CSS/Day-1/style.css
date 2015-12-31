@@ -1,0 +1,25 @@
+body {
+	background-color: red; /* color coding is of four types */
+}
+h1 {
+	color: magenta;
+}
+h2 {
+	color: green; /* sdjfldf */
+	font-size: 30px;
+}
+#stand-out-hd {
+	font-size: 40px;
+}
+.w-600 {
+	width: 600;
+}
+.w-500 {
+	width: 500px;
+}
+.green-txt {
+	color: green !important;
+}
+p.w-500.green-txt {
+    font-size: 35px;
+}

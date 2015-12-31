@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms in HTML</title>
+</head>
+<body>
+	
+	<form method="post" action="thanks.html">
+		<label for="name">Your Name</label>
+		<input name="name" placeholder="Type your name here" id="name" type="text" maxlength="50">
+		<br /><br /> 
+		
+		<label for="email">Your Email</label>
+		<input name="email" placeholder="Type your email here" id="email" type="email">
+		<br /> <br /> 
+		
+		<label>Your Gender</label>
+		<input id="male" value="male" name="gender" type="radio" checked="checked"><label for="male">Male</label>
+		<input id="female" value="female" name="gender" type="radio" ><label for="female">Female</label>
+		<br/><br/>
+		
+		Your Hobbies:
+			<label><input name="hobbies" type="checkbox">Reading</label>
+			<label><input name="hobbies" type="checkbox">Playing</label>
+			<label><input name="hobbies" type="checkbox">Travelling</label>	
+
+		<br /><br/>
+		Date of Birth:
+			<select name="dobd">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option selected="selected">31</option>
+			</select> - 
+			<select name="dobm">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>12</option>
+			</select> - 
+			<select name="doby">
+				<option>1910</option>
+				<option>1911</option>
+				<option>1912</option>
+				<option>2015</option>
+			</select>
+		
+		<br /><br />
+		
+		Comments (if any)<br />
+		<textarea name="comments" rows="7" cols="50"></textarea>
+
+		<br /><br />
+	
+		<input type="reset">
+		<input type="submit" value="Sign Up Now">
+	</form>
+
+</body>
+</html>

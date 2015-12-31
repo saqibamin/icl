@@ -1,0 +1,83 @@
+CSS:
+	Cascading StyleSheets
+
+HTML gives the structure and CSS is used to Present it.
+	CSS is the design of your HTML document
+
+How to embed CSS in HTML document:
+	1: External StyleSheet
+		an external CSS document is embedded in HTML  using
+		link tag inside HEAD section.
+			<link href="address.css" type="text/css" rel="styleSheet" />
+	2: Internal StyleSheet
+			All the CSS in written inside the Head of the same document using <style> tag.
+
+	3: Inline Styles
+			CSS is applied to the particular HTML element using Style Attribute
+				e.g, <p style="styles here">Some text</p>
+
+
+CSS Syntax:
+	selector {
+		property: value;
+		property1: value1;
+		property1: value1;
+		property1: value1;
+		propertyn: valuen;
+	}
+	Descriptor Block
+
+	Selector is used to Select a particular element or group of elements inside of HTML document to which CSS styles are to be applied.
+
+	Types of Selectors:
+	1: Tag Selector
+		Name of HTML Tag is written directly.,e.g,
+			p {
+				property: vaalue;
+			}
+			h1 {
+				property: value;
+			}
+	2: ID Selector
+			<p id="main-para">Text</p>
+			NOT POSSIBLE <p id="main-para">Text</p>
+
+			#main-para {
+				property: value;
+			}
+
+	3: Class Selector
+			<p class="general-para">Some text</p>
+			<p class="general-para">Some text</p>
+			<h1 class="general-para">Some text</h1>
+
+			.general-para {
+				property: value;
+			}
+
+
+Colors in CSS:
+	Named Colors:
+		All named colors can be used, like black, white, yellow, magenta...
+
+	Hex Codes:
+		#rrggbb	
+
+		#000000 - black
+		#111111
+		#eeeeee 
+		#ffffff - white
+
+		ff = 255
+
+	RGB Code:
+		rgb(r,g,b)
+
+		rgb(0,0,0) = black
+		rgb(255,255,255) = white
+
+	RGBA Code:
+		rgba(r,g,b,a)
+
+		rgba(0,0,0, 0.5) = half transparent black
+		rgba(0,0,0,1) = black

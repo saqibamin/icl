@@ -1,0 +1,43 @@
+Web Development:
+		Website/Web Application
+			Website: Collection of Linked Web pages
+				Webpage: A document written in HTML
+					Front-End/Client Side
+						HTML, CSS, JavaScript
+					Back-End/Server Side
+						PHP, ASP, Python, Ruby, Java, Cold...
+
+HTML:	HyperText Markup Language
+			HyperText: Can be linked with each other and different
+						types of data can be embedded within it.
+			Markup:		Text is Marked using special notations.
+							Tags
+								Used to markup text
+
+
+Tags Syntax:
+	<tag_name>text to be marked</tag_name>This is not part of previous marking
+
+	Paired Tags: they come in pairs, opening and closing
+	Singleton Tags/Standalone/Self-Closing Tags: Dont have closing tags
+
+	<b>This is text</b>
+	<i>This is italic</i>
+
+	<br />
+	<img ... />
+
+	Tags can be nested.
+		<p>This is a paragraph and <b>this text is bold</b></p>
+
+	Tags can have attributes
+	<tag_name attr_name="" attr2_name="">Tag Text</tag_name>
+	
+Elements:
+	Block Level Elements
+	Inline/Non-Block Level Elements
+
+Extensions: .html .htm
+
+Editor: Notepad, Sublime Text 3
+
