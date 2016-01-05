@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working with HTML</title>
+</head>
+<body>
+	
+	<h1 id="change-me">Some Heading Here</h1>
+	<button onclick="change_heading();">Click Me</button>
+		
+	<a href="http://google.com" onclick="return false;">Goto Google</a>
+
+	<input type="text" onblur="" onkeypress="">
+
+	<script type="text/javascript">
+		function change_heading() {
+			document.getElementById('change-me').innerHTML = "Heading Changed";
+		}
+	</script>
+</body>
+</html>

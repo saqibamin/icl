@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working with Forms</title>
+	<style type="text/css">
+		.red-borders {
+			border: 1px solid #cb0009;
+		}
+	</style>
+</head>
+<body>
+
+	<form onsubmit="return validate_form(this);">
+		<label>Your Name: <input type="text" name="name" /></label><br/><br/>
+		<label>Your Email: <input type="text" id="email" name="email" /></label><br/><br/>
+		<label>Your Message:<br/><textarea name="message"></textarea></label><br/><br/>
+		<input type="submit" value="Send Data">
+	</form>
+
+	<script type="text/javascript">
+	/*
+		Show error messages below each input field if found
+	*/
+	function validate_form(f) {
+		
+		var error_flag = false;
+
+		if( f.name.value.length < 3 ) {
+			f.name.className = 'red-borders';
+			f.name.focus();
+			error_flag = true;
+			// return false;
+		} else {
+			f.name.className = '';
+		}
+		
+		if( f.email.value.length < 3 ) {
+			f.email.className = 'red-borders';
+			if( !error_flag ) 
+				f.email.focus();
+			error_flag = true;
+			// return false;
+		} else {
+			f.email.className = '';
+		}
+		if( f.message.value.length < 3 ) {
+			f.message.className = 'red-borders';
+			if( !error_flag )
+				f.message.focus();
+			error_flag = true;
+			// return false;
+		} else {
+			f.message.className = '';
+		}
+
+		// if( error_flag ) return false;
+		// else return true;
+
+		return !error_flag;
+	}
+	</script>
+
+</body>
+</html>
