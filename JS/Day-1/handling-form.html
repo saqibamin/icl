@@ -6,14 +6,44 @@
 		.red-borders {
 			border: 1px solid #cb0009;
 		}
+		form td {
+			vertical-align: top;
+		}
+		form td span {
+			display: none;
+			/*display: block;*/
+		}
+		.red-borders + span {
+		    display: block;
+		}
 	</style>
 </head>
 <body>
 
 	<form onsubmit="return validate_form(this);">
-		<label>Your Name: <input type="text" name="name" /></label><br/><br/>
-		<label>Your Email: <input type="text" id="email" name="email" /></label><br/><br/>
-		<label>Your Message:<br/><textarea name="message"></textarea></label><br/><br/>
+		<table>
+			<tr>
+				<td>Your Name:</td>
+				<td >
+					<input type="text" name="name" />
+					<span id="message-for-name">Name is Required</span>
+				</td>
+			</tr>
+			<tr>
+				<td>Your Email:</td>
+				<td>
+					<input type="text" id="email" name="email" />
+					<span>Email is Required</span>
+				</td>
+			</tr>
+			<tr>
+				<td>Your Message:</td>
+				<td>
+					<textarea name="message"></textarea>
+					<span>Message cannot be empty</span>
+				</td>
+			</tr>
+		</table>
 		<input type="submit" value="Send Data">
 	</form>
 
@@ -27,10 +57,12 @@
 
 		if( f.name.value.length < 3 ) {
 			f.name.className = 'red-borders';
+			// document.getElementById('message-for-name').innerHTML = 'Name is Required';
 			f.name.focus();
 			error_flag = true;
 			// return false;
 		} else {
+			// document.getElementById('message-for-name').innerHTML = '';
 			f.name.className = '';
 		}
 		
