@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introducing jQuery</title>
+	<style type="text/css">
+		.green-txt {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1 class="change-me">This is some heading</h1>
+	<button class="click-me">Click Me</button>
+	<button class="hide-heading">Hide Heading</button>
+	<button class="show-heading">Show Heading</button>
+	<button class="add-the-class">Add class</button>
+	<button class="remove-the-class">Remove class</button>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+
+		// document.getElementById('change-me').innerHTML = 'Heading Changed';
+
+		$('.click-me').click(function() {
+			$('.change-me').html('Heading Changed');
+		});
+
+		$('.hide-heading').click(function() {
+			// $('.change-me').hide();
+			// $('.change-me').fadeOut();
+			$('.change-me').slideUp();
+		});
+
+		$('.show-heading').click(function() {
+			// $('.change-me').show();
+			// $('.change-me').fadeIn(400);
+			$('.change-me').slideDown();
+		});
+
+		$('.add-the-class').click(function() {
+			$('.change-me').addClass('green-txt');
+		});
+
+		$('.remove-the-class').click(function() {
+			$('.change-me').removeClass('green-txt');
+		});
+
+		/*
+			SELECT * FROM students S, class C
+			WHERE S.roll_number=C.roll_number
+			
+			SELECT count(*) AS Total FROM students
+		 */
+		
+	</script>
+
+</body>
+</html>

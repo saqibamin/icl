@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating Wizard in jQuery</title>
+	<style type="text/css">
+		.red-borders {
+			border: 1px solid #cb0009;
+		}
+		.step-2 {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<a href="#" id="tab-1">Tab 1</a>
+	<a href="#" id="tab-2">Tab 2</a>
+	<a href="#" id="tab-3">Tab 3</a>
+		
+	</div>
+	
+	<form>
+		<div class="step-1">
+			<h2>Personal Information</h2>
+			<label>Your Name:</label><br/>
+			<input class="name" type="text" name="name"><br/><br/>
+
+			<label>Father Name</label><br/>
+			<input class="father-name" type="text" name="father-name"><br/><br/>
+
+			<label>NIC</label><br/>
+			<input class="nic" type="text" name="nic"><br/><br/>
+
+			<button class="goto-step-2">Goto Step 2</button>
+		</div>
+		<div class="step-2">
+			<h2>Academic Data</h2>
+
+			<label>Roll Number:</label><br/>
+			<input type="text" name="rollnumber"><br/><br/>
+
+			<label>Class</label><br/>
+			<input type="text" name="class-name"><br/><br/>
+
+			<label>Subject</label><br/>
+			<input type="text" name="subjects"><br/><br/>
+			<button class="goto-step-1">Go Back</button>
+			<input type="submit" value="Send Data">
+		</div>
+	</form>
+	
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$('.goto-step-1').click(function(e) {
+			e.preventDefault();
+			$('.step-2').hide();
+			$('.step-1').show();
+		});
+		$('.goto-step-2').click(function(e) {
+			e.preventDefault();
+			var error_flag = false;
+			
+			if( $('.name').val().length < 3) {
+				error_flag = true;
+				$('.name').focus();
+				$('.name').addClass('red-borders');
+			} else {
+				$('.name').removeClass('red-borders');
+			}
+
+			if( error_flag ) return false;
+
+			$('.step-1').hide();
+			$('.step-2').show();
+		});
+	</script>
+
+</body>
+</html>
