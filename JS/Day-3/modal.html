@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handling Modal Boxes in jQuery</title>
+	<style type="text/css">
+		.overlay {
+			background: rgba(0,0,0,0.7);
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		.modal-wrapper {
+			display: none;
+			position: fixed;
+			width: 500px;
+			height: 500px;
+			background-color: #fff;
+			top: 50%;
+			left: 50%;
+			margin-top: -250px;
+			margin-left: -250px;
+		}
+	</style>
+</head>
+<body>
+	
+	<a href="#" id="show-modal">Show Modal Box</a>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate numquam perspiciatis, dolore repellat autem cum consequatur! Provident odit voluptatibus, quos repellendus, consequatur, illum laudantium ut, reiciendis optio rerum dolores inventore.</p>
+	<p>Provident ipsum quos odit a rem illum dicta numquam, vero natus quibusdam, expedita eum voluptatibus repudiandae incidunt at esse iusto quo excepturi officiis eveniet deserunt iste veniam ad accusantium beatae.</p>
+	<p>Hic maxime voluptates, accusamus iste, illum, alias ullam aperiam fugiat sint harum cumque dolores repellat excepturi aspernatur natus magni temporibus nostrum quam saepe architecto in aliquid praesentium optio? Vel, ea.</p>
+	<p>Consequuntur neque nobis adipisci, illo. Fugit optio officia totam illo accusamus cum repudiandae ipsa? Explicabo minus quasi natus tempora laboriosam, voluptates velit illum, quidem, perferendis, dignissimos nulla debitis aliquid assumenda!</p>
+	<p>Voluptates, tenetur eos veritatis ipsam natus officiis ducimus voluptatum! Quibusdam libero asperiores expedita eum ipsum provident incidunt quod qui eos. Libero velit aperiam suscipit, debitis rem ducimus voluptatem magni perferendis.</p>
+	<p>Consequatur, facilis itaque ullam. Impedit distinctio voluptas cumque ipsum ipsa dolores nihil saepe corporis velit alias. Non nostrum quae dolores doloremque, itaque hic obcaecati ullam optio quam repellendus eveniet, cupiditate.</p>
+	<p>Voluptatem cum ea voluptatum excepturi nihil veniam, voluptatibus ex officiis vero iste architecto non, facilis doloribus, tenetur. Ab aliquam, quos necessitatibus laudantium debitis asperiores. Quasi quaerat doloremque totam consequatur fuga.</p>
+	<p>Laboriosam, sit repudiandae, aliquam quasi modi ab totam velit quidem ipsa illum porro numquam ullam, corporis fuga similique enim. Unde ab quam rerum dolorum totam nobis, accusantium error! Ea, delectus.</p>
+	<p>Maxime culpa sunt libero, sed aspernatur veniam itaque reprehenderit fuga molestiae voluptatibus dolore dolorem molestias distinctio, repellat qui possimus eius dolor dolores, earum accusantium quasi ab! Culpa enim reiciendis cum!</p>
+	<p>A iste nihil ea expedita, mollitia magni voluptatem est odit fugiat voluptatum laborum itaque laudantium. Ipsum optio, aspernatur beatae. Voluptas dignissimos soluta, itaque et natus ut cupiditate at adipisci error.</p>
+	
+	
+	<div class="overlay"></div>
+	
+	<div class="modal-wrapper">
+		<h1>I am in a modal</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, blanditiis.</p>
+		<p>Ea delectus dignissimos quia nihil neque, eius architecto, eaque nulla.</p>
+	</div>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+
+		$('#show-modal').click(function(e) {
+			e.preventDefault();
+
+			$('.overlay').fadeIn(400, function() {
+				$('.modal-wrapper').fadeIn();			
+			});
+
+		});
+
+		$('.overlay').click(function(e) {
+			e.preventDefault();
+
+			$('.modal-wrapper').fadeOut(function() {
+				$('.overlay').fadeOut();
+			});
+		});
+
+	</script>
+</body>
+</html>

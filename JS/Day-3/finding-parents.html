@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding Parents</title>
+	<style type="text/css">
+		.highlight {
+			background: #ff0;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('li').click(function() {
+		
+			// if( $(this).hasClass('highlight') ) {
+			// 	$(this).removeClass('highlight');
+			// } else {
+			// 	$(this).addClass('highlight');
+			// }
+
+			$(this).toggleClass('highlight');
+
+			// $(this).slideToggle();
+
+			$(this).closest('ul').append('<li>This item was added dynamically</li>');
+		});
+	});
+	</script>
+</head>
+<body>
+		
+	<ul>
+		<li>Lorem ipsum.</li>
+		<li>Iste, odit?</li>
+		<li>Accusamus, amet!</li>
+		<li>Blanditiis, placeat.</li>
+		<li>Repellendus, dolorem.</li>
+		<li>Obcaecati, nulla.</li>
+		<li>Eveniet, eligendi.</li>
+		<li>Sit, debitis!</li>
+		<li>Nam, minus!</li>
+		<li>Dolorum, dolorem!</li>
+	</ul>
+	<ul>
+		<li>Iste, odit?</li>
+		<li>Accusamus, amet!</li>
+		<li>Blanditiis, placeat.</li>
+		<li>
+			Lorem ipsum.
+			<ul>
+				<li>Lorem.</li>
+				<li>Neque?</li>
+				<li>Quasi.</li>
+				<li>Aspernatur.</li>
+			</ul>
+		</li>
+		<li>Repellendus, dolorem.</li>
+		<li>Obcaecati, nulla.</li>
+		<li>Eveniet, eligendi.</li>
+		<li>Sit, debitis!</li>
+		<li>Nam, minus!</li>
+		<li>Dolorum, dolorem!</li>
+	</ul>
+</body>
+</html>

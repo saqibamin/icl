@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Some jQuery Functions</title>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, molestias.</p>
+	<button id="top" class="change-css">Change my CSS</button>	
+	<button class="hide-me">Hide Me</button>	
+	<button class="hide-me">Hide Me</button>	
+
+	<div class="content-wrapper">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet tempore deleniti dignissimos officiis, earum enim natus possimus error ullam est?</p>
+		<p>Itaque nostrum mollitia, minima provident, eum assumenda aliquid maiores ipsum in sapiente veritatis id natus aperiam optio inventore laboriosam consequatur!</p>
+		<p>Quas maxime laborum totam accusamus magnam, deleniti eaque aliquam odit incidunt! Perferendis officiis tenetur, eligendi reprehenderit rerum numquam, qui quia.</p>
+		<p>Quos nulla totam, magnam sint cum laudantium aliquid optio delectus repellendus a, quod laborum fugiat repellat distinctio assumenda consequuntur nisi.</p>
+		<p>Porro corporis necessitatibus magni autem aliquid illo labore cupiditate culpa modi ea blanditiis, explicabo nemo maxime esse iste laborum qui!</p>
+		<p>Officia, odit a ipsum aspernatur ex ab atque, dolore illo quibusdam, tempora soluta assumenda facere temporibus itaque iusto perspiciatis esse.</p>
+		<p>Inventore sequi fuga rerum quo dicta assumenda nesciunt quos ullam, sint nisi suscipit alias eum tenetur, commodi, natus iusto a.</p>
+		<p>Cum asperiores voluptates voluptate obcaecati tempora assumenda ipsa, laudantium officia consectetur hic mollitia ratione esse nemo ex, labore sint earum.</p>
+		<p>Suscipit soluta nemo, officiis quo, perferendis error sapiente doloremque eaque ut quasi quisquam, praesentium. Reprehenderit, distinctio. Fugit eos unde officia!</p>
+		<p>Cupiditate corporis autem quaerat et. Molestias ipsam, sed. Atque ipsum rem, amet natus, error aut quo temporibus quisquam tenetur repudiandae!</p>
+	</div>
+		
+	<a id="goto-top-link" href="#top">Goto Top</a>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+
+		$('#goto-top-link').click(function(e) {
+			e.preventDefault();
+			/*
+				Grabbing Precise location of an element from top and left:
+					use offset() method
+				To get position of window scrollbar use 
+					$(window).scrollTop()
+	
+				To animate css property
+				animate()
+			*/
+
+			var target_location = $('#top').offset().top;
+			$('body,html').animate({scrollTop: target_location + 'px' }, 1000);
+
+		});
+
+		$('.hide-me').click(function(e) {
+			e.preventDefault();
+			$(this).hide();
+			// $('.hide-me').hide();
+		});
+
+		$('.change-css').click(function() {
+			// chaining in jQuery
+			// $(this).css('background', '#cb0009').css('color', '#fff');
+
+			/* animates css properties */
+			// $(this).animate( { color: '#fff' } );
+		});
+
+
+
+	</script>
+	
+</body>
+</html>
