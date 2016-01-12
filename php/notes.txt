@@ -1,0 +1,39 @@
+HTML
+CSS
+JavaScript - jQuery
+
+
+PHP - Server Side
+		Software > Apache
+MySQL
+
+
+php download install
+mysql download install
+apache download install
+configuration
+
+*AMPP
+	A - Apache
+	M - MySQL
+	P - PHP
+	P - Perl
+
+LAMPP
+	L -> Linux
+WAMPP
+	W -> Windows
+XAMPP
+	X -> Any Platform
+MAMPP
+	M -> Macintosh
+
+apachefriends.org
+
+
+PHP > Personal Home Page
+	> PHP: HyperText Preprocessor
+
+
+Client > Apache > PHP > MySQL > PHP > Apache > Client
+
