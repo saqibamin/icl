@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horizontal Tabs</title>
+	<link rel="stylesheet" type="text/css" href="horizontal-tabs.css">
+</head>
+<body>
+		
+	<div class="tabs-wrapper">
+		<div class="tabs-hds">
+			<a href="#" data-index="1" class="current">Tab 1</a>
+			<a href="#" data-index="2">Tab 2</a>
+			<a href="#" data-index="3">Tab 3</a>
+			<a href="#" data-index="4">Tab 4</a>
+		</div>
+		<div class="tabs-contents">
+			<div class="tab-content current" data-index="1">
+				<h1>Tab 1 Content</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit soluta iure aliquid, sint ab architecto sequi facilis nobis voluptatem optio.</p>
+			</div>
+			<div class="tab-content" data-index="2">
+				<h1>Tab 2 Content</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit soluta iure aliquid, sint ab architecto sequi facilis nobis voluptatem optio.</p>
+			</div>
+			<div class="tab-content" data-index="3">
+				<h1>Tab 3 Content</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit soluta iure aliquid, sint ab architecto sequi facilis nobis voluptatem optio.</p>
+			</div>
+			<div class="tab-content" data-index="4">
+				<h1>Tab 4 Content</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit soluta iure aliquid, sint ab architecto sequi facilis nobis voluptatem optio.</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$('.tabs-hds a').click(function() {
+			if( $(this).hasClass('current') ) return false;
+
+			var my_index = $(this).data('index');
+
+			$('.tabs-wrapper .current').removeClass('current');
+
+			/*$('.tabs-hds a[data-index="' + my_index + '"]').addClass('current');
+			$('.tabs-contents .tab-content[data-index="' + my_index + '"]').addClass('current');*/
+
+			$('.tabs-wrapper *[data-index="' + my_index + '"]').addClass('current');
+
+		});
+	</script>
+</body>
+</html>
