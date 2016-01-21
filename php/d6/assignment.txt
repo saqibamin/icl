@@ -1,0 +1,9 @@
+Create a Form:
+	Insert Student
+		Student Name: 
+		Father Name:
+		Class: 
+
+		Submit
+
+INSERT provided data in students table of test database

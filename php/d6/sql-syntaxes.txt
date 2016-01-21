@@ -1,0 +1,24 @@
+SELECT *|column_1_name[,column_2_name,...]
+FROM tbl_name
+[WHERE condition AND condition2]
+
+INSERT INTO tblname[(column_1_name, column_2_name...)]
+VALUES(column_1_value, column_2_value...)
+
+SELECT COUNT(*) FROM tblname [WHERE..];
+
+UPDATE tblname
+SET column_1_name=new_value,
+	column_2_name=new_value
+
+WHERE condition;
+
+DELETE FROM tblname WHERE condition;
+
+
+#CHAR > 30 > Fixed Storage for 30 characters
+	# something -> occupies 30 bytes
+#VARCHAR > 30 > upper limit of 30 characters
+	# something -> occupies 9 bytes
+
+TEXT #for larger text values
