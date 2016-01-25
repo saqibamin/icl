@@ -1,0 +1,11 @@
+Blogging System
+	Users
+		Publish Post
+			Category
+
+---------
+# Find Relationships b/w each of following and propose a solution to implement them
+
+Post(post_title, content, post_date)
+Category(category_name)
+Users(full_name, user_name, password)
