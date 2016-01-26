@@ -6,6 +6,16 @@ Blogging System
 ---------
 # Find Relationships b/w each of following and propose a solution to implement them
 
-Post(post_title, content, post_date)
-Category(category_name)
-Users(full_name, user_name, password)
+# Registered Users > Publish Posts which have title, content and a publishing date and Each post will must be tagged under one category. 
+
+Posts(post_id, user_id, category_id, post_title, content, post_date)
+Categories(category_id, category_name)
+Users(user_id, full_name, user_name, password)
+
+
+
+Set a Session Variable upon Login
+	$_SESSION['user_id']
+
+	if session variable exists > loggged in
+	else logged out
