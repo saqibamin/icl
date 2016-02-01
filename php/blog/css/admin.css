@@ -6,6 +6,9 @@ body {
 * {
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+}
 .clear {
     clear: both;
 }
@@ -67,7 +70,7 @@ body {
     color: #fff;
     margin: 0;
 }
-.admin-navigation a {
+.admin-navigation a.logout-btn {
     float: right;
     display: inline-block;
     color: #fff;
@@ -79,7 +82,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
-.admin-navigation a:hover {
+.admin-navigation a.logout-btn:hover {
     background: #000;
 }
 h1.page-title {
@@ -149,4 +152,47 @@ table.all-posts-table {
 }
 .all-posts-table tbody tr:hover {
     background: #f0f0f0;
+}
+.secondary-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.secondary-navigation ul li {
+    display: inline;
+    float: left;
+}
+
+.secondary-navigation {
+    background: #928F8F;
+}
+
+.secondary-navigation a {
+    color: #fff;
+    line-height: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: block;
+    text-align: center;
+}
+
+.secondary-navigation a:hover {
+    background: #757474;
+}
+
+.secondary-navigation:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.add-new-btn {
+    float: right;
+    display: block;
+    padding: 5px 15px;
+    background: #03A2FF;
+    color: #fff;
+}
+.add-new-btn:hover {
+    background: #0776B7;
 }

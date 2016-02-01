@@ -1,4 +1,5 @@
 <div class="container">
+	<a class="add-new-btn" href="<?php echo BASE_URL;?>admin">+ New Post</a>
 	<h1 class="page-title">All Posts</h1>
 	<table class="all-posts-table">
 		<thead>
@@ -18,7 +19,7 @@
 							<td>{$post['post_id']}</td>
 							<td>{$post['post_title']}</td>
 							<td class='text-center'><a href='" . BASE_URL . "admin/?page=edit_post&post_id={$post['post_id']}'>Edit</a></td>
-							<td class='text-center'>Delete</td>
+							<td class='text-center'><a class='delete-btn' href='" . BASE_URL . "admin/processors/delete-post.php?post_id={$post['post_id']}'>Delete</a></td>
 						</tr>";	
 				}
 			?>

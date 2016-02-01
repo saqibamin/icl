@@ -12,7 +12,9 @@
 			// new-user
 			// all-posts
 
-			$valid_pages = array('new-category', 'new-user', 'all_posts', 'edit_post');
+			$valid_pages = 
+				array('new-category', 'new-user', 'all_posts',
+					'edit_post', 'all_cats', 'edit_cat');
 			$page = $_GET['page'];
 			
 			if( in_array($page, $valid_pages) )

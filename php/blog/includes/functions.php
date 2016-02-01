@@ -62,6 +62,20 @@ function get_post($post_id = 0) {
 	else
 		return false;
 }
+function get_category($category_id = 0) {
+	global $conn;
+
+	$category_id = (int) $category_id;
+
+	$category_query = "SELECT * FROM categories WHERE category_id={$category_id}";
+
+	$category_query = mysqli_query($conn, $category_query);
+
+	if( $category_query )
+		return mysqli_fetch_assoc($category_query);
+	else
+		return false;
+}
 
 // post_exists($post_id)
 // post_exists(587) // must return false
