@@ -12,11 +12,13 @@ if( !isset($_POST['login_btn']) ) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+// preventing against SQL Injection Attacks
+$password = mysqli_escape_string($conn, $password);
 
 // Hacking
 // SQL-Injection -> Special Characters
 // username: admin
-// password: ' OR '' = '; DROP users;#
+// password:  = '; DROP users;#
 
 $check_auth = 
 	"SELECT * FROM users

@@ -8,8 +8,8 @@ if( !isset($_POST['edit_post_btn']) || !isset($_POST['post_id']) || !post_exists
 }
 
 
-$post_title = $_POST['post_title'];
-$post_content = $_POST['post_content'];
+$post_title = mysqli_escape_string( $conn, $_POST['post_title'] );
+$post_content = mysqli_escape_string( $conn, $_POST['post_content'] );
 $category_id = (int) $_POST['category_name'];
 $post_id = (int) $_POST['post_id'];
 

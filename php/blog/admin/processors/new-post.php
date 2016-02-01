@@ -8,8 +8,8 @@ if( !isset($_POST['new_post_btn']) || !is_logged_in() ) {
 }
 
 
-$post_title = $_POST['post_title'];
-$post_content = $_POST['post_content'];
+$post_title = mysqli_escape_string( $conn, $_POST['post_title'] );
+$post_content = mysqli_escape_string( $conn, $_POST['post_content'] );
 $category_id = (int) $_POST['category_name'];
 $user_id = $_SESSION['user_id'];
 

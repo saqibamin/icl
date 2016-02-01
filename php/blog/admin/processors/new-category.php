@@ -8,7 +8,7 @@ if( !isset($_POST['new_cat_btn']) || !is_logged_in() ) {
 }
 
 
-$category_name = $_POST['category_name'];
+$category_name = mysqli_escape_string( $conn, $_POST['category_name'] );
 
 $insert_query = 
 	"INSERT INTO categories(category_name)
