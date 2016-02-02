@@ -15,6 +15,8 @@ $password = $_POST['password'];
 // preventing against SQL Injection Attacks
 $password = mysqli_escape_string($conn, $password);
 
+$password = md5($password);
+
 // Hacking
 // SQL-Injection -> Special Characters
 // username: admin

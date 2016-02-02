@@ -99,7 +99,9 @@ h1.page-title {
     margin-bottom:5px;
     font-weight: bold;
 }
-.new-post-form input[type=text], .new-post-form textarea {
+.new-post-form input[type=text],
+.new-post-form input[type=password],
+.new-post-form textarea {
     width: 100%;
     height: 35px;
     line-height: 35px;
@@ -127,7 +129,8 @@ h1.page-title {
     padding-top: 5px;
     resize: none;
 }
-.new-post-form input[type=text]:focus {
+.new-post-form input[type=text]:focus,
+.new-post-form input[type=password]:focus {
     border-color: #aaa;
 }
 table.all-posts-table td,table.all-posts-table th {

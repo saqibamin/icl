@@ -14,7 +14,8 @@
 
 			$valid_pages = 
 				array('new-category', 'new-user', 'all_posts',
-					'edit_post', 'all_cats', 'edit_cat');
+					'edit_post', 'all_cats', 'edit_cat',
+					'all_users', 'create_user', 'edit_user');
 			$page = $_GET['page'];
 			
 			if( in_array($page, $valid_pages) )

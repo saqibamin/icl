@@ -46,6 +46,24 @@ function get_all_posts() {
 	return $all_posts;
 }
 
+function get_all_users() {
+	global $conn;
+
+	$users_query = "SELECT * FROM users";
+
+	$users_query = mysqli_query($conn, $users_query);
+
+	$all_users = array();
+
+	// $counter  = 0;
+	while( $user = mysqli_fetch_assoc($users_query) ) {
+		// $all_users[$counter++] = $user; 
+		$all_users[] = $user; 
+	}
+
+	return $all_users;
+}
+
 
 // get_post('abc');
 function get_post($post_id = 0) {
@@ -59,6 +77,21 @@ function get_post($post_id = 0) {
 
 	if( $posts_query )
 		return mysqli_fetch_assoc($posts_query);
+	else
+		return false;
+}
+
+function get_user($user_id = 0) {
+	global $conn;
+
+	$user_id = (int) $user_id;
+
+	$user_query = "SELECT * FROM users WHERE user_id={$user_id}";
+
+	$user_query = mysqli_query($conn, $user_query);
+
+	if( $user_query )
+		return mysqli_fetch_assoc($user_query);
 	else
 		return false;
 }
