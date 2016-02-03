@@ -199,3 +199,6 @@ table.all-posts-table {
 .add-new-btn:hover {
     background: #0776B7;
 }
+.new-post-form .red-borders {
+    border-color: #cb0009 !important;
+}

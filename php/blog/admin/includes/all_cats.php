@@ -20,7 +20,7 @@
 							<td>{$cat['category_name']}</td>
 							<td class='text-center'><a href='" . BASE_URL . "admin/?page=edit_cat&category_id={$cat['category_id']}'>Edit</a></td>
 							<td class='text-center'>
-								" . ( $cat['category_id'] == 0 ? "" : "<a class='delete-btn' href='" . BASE_URL . "admin/processors/delete-cat.php?category_id={$cat['category_id']}'>Delete</a>" ) . "
+								" . ( $cat['category_id'] == 0 ? "" : "<a class='delete-btn' data-msg='Do you really want to delete this category?' href='" . BASE_URL . "admin/processors/delete-cat.php?category_id={$cat['category_id']}'>Delete</a>" ) . "
 							</td>
 						</tr>";	
 				}

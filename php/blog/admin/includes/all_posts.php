@@ -19,7 +19,7 @@
 							<td>{$post['post_id']}</td>
 							<td>{$post['post_title']}</td>
 							<td class='text-center'><a href='" . BASE_URL . "admin/?page=edit_post&post_id={$post['post_id']}'>Edit</a></td>
-							<td class='text-center'><a class='delete-btn' href='" . BASE_URL . "admin/processors/delete-post.php?post_id={$post['post_id']}'>Delete</a></td>
+							<td class='text-center'><a class='delete-btn' data-msg='Do you really want to delete this post?' href='" . BASE_URL . "admin/processors/delete-post.php?post_id={$post['post_id']}'>Delete</a></td>
 						</tr>";	
 				}
 			?>
