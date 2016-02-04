@@ -31,7 +31,46 @@ function get_all_categories() {
 function get_all_posts() {
 	global $conn;
 
-	$posts_query = "SELECT * FROM posts";
+	$posts_query = "SELECT * FROM posts ORDER BY publish_date DESC";
+
+	$posts_query = mysqli_query($conn, $posts_query);
+
+	$all_posts = array();
+
+	// $counter  = 0;
+	while( $post = mysqli_fetch_assoc($posts_query) ) {
+		// $all_posts[$counter++] = $post; 
+		$all_posts[] = $post; 
+	}
+
+	return $all_posts;
+}
+
+function get_current_page() {
+	$current_page = 1;
+
+	if( isset($_GET['paged']) && !empty($_GET['paged']) ) {
+		$current_page = (int) $_GET['paged'];
+
+		if( $current_page == 0 ) $current_page = 1;
+	}
+
+	return $current_page;
+}
+function get_posts() {
+	global $conn;
+
+	$post_per_page = get_posts_per_page();
+	
+	$current_page = get_current_page();
+
+	$offset = ($current_page - 1) * $post_per_page;
+
+	$posts_query = 
+		"SELECT *
+		FROM posts
+		ORDER BY publish_date DESC
+		LIMIT $offset, $post_per_page";
 
 	$posts_query = mysqli_query($conn, $posts_query);
 
@@ -95,6 +134,39 @@ function get_user($user_id = 0) {
 	else
 		return false;
 }
+
+function get_user_name_by_id($user_id = 0) {
+	global $conn;
+
+	$user_id = (int) $user_id;
+
+	$user_query = "SELECT full_name FROM users WHERE user_id={$user_id}";
+
+	$user_query = mysqli_query($conn, $user_query);
+
+	if( $user_query ) {
+		$user_query = mysqli_fetch_assoc($user_query);
+		return array_shift($user_query);
+	}
+	else
+		return '';
+}
+
+function get_total_posts_count() {
+	global $conn;
+
+	$posts_count = "SELECT COUNT(*) FROM posts";
+
+	$posts_count = mysqli_query($conn, $posts_count);
+
+	if( $posts_count ) {
+		$posts_count = mysqli_fetch_assoc($posts_count);
+		return array_shift($posts_count);
+	}
+	else
+		return '';
+}
+
 function get_category($category_id = 0) {
 	global $conn;
 
@@ -117,4 +189,8 @@ function get_category($category_id = 0) {
 function post_exists($post_id) {
 
 	return true;
+}
+
+function get_posts_per_page() {
+	return 4;
 }

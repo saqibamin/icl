@@ -45,3 +45,14 @@ $('.new-post-form form').submit(function(e) {
 	else
 		return true;
 });
+
+
+// check if we have the .msg div
+
+if( $('.msg').length > 0 ) {
+	$('.msg').fadeIn().delay(2000).fadeOut();
+}
+
+$('a.current-page').click(function(e) {
+	e.preventDefault();
+});
