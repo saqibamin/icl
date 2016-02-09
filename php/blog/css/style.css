@@ -60,8 +60,11 @@ a {
 
 .post h2 {
     margin: 0;
+    color: #333;
 }
-
+.post h2:hover {
+    color: #000;
+}
 
 .post-meta,.post h2 {
     padding: 5px;
@@ -88,4 +91,42 @@ a {
 
 .pagination a.current-page {
     background: #FFFFFF;
+}
+.side-box {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.side-box h3 {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    background: #f8f8f8;
+}
+
+.side-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-box li a {
+    display: block;
+    line-height: 25px;
+    padding: 3px 3px 3px 5px;
+    color: #333;
+    border-bottom: 1px dashed #ddd;
+}
+
+.side-box li:last-child a {
+    border-bottom: none;
+}
+
+.side-box li a:hover {
+    background: #f0f0f0;
+}
+h1.cat-title {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
 }

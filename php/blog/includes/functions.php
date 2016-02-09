@@ -85,6 +85,63 @@ function get_posts() {
 	return $all_posts;
 }
 
+function get_category_posts($category_id = 0) {
+	global $conn;
+
+	$post_per_page = get_posts_per_page();
+	
+	$current_page = get_current_page();
+
+	$offset = ($current_page - 1) * $post_per_page;
+
+	$posts_query = 
+		"SELECT *
+		FROM posts
+		WHERE category_id={$category_id}
+		ORDER BY publish_date DESC
+		LIMIT $offset, $post_per_page";
+
+	$posts_query = mysqli_query($conn, $posts_query);
+
+	$all_posts = array();
+
+	// $counter  = 0;
+	while( $post = mysqli_fetch_assoc($posts_query) ) {
+		// $all_posts[$counter++] = $post; 
+		$all_posts[] = $post; 
+	}
+
+	return $all_posts;
+}
+function get_user_posts($user_id = 0) {
+	global $conn;
+
+	$post_per_page = get_posts_per_page();
+	
+	$current_page = get_current_page();
+
+	$offset = ($current_page - 1) * $post_per_page;
+
+	$posts_query = 
+		"SELECT *
+		FROM posts
+		WHERE user_id={$user_id}
+		ORDER BY publish_date DESC
+		LIMIT $offset, $post_per_page";
+
+	$posts_query = mysqli_query($conn, $posts_query);
+
+	$all_posts = array();
+
+	// $counter  = 0;
+	while( $post = mysqli_fetch_assoc($posts_query) ) {
+		// $all_posts[$counter++] = $post; 
+		$all_posts[] = $post; 
+	}
+
+	return $all_posts;
+}
+
 function get_all_users() {
 	global $conn;
 
@@ -167,6 +224,36 @@ function get_total_posts_count() {
 		return '';
 }
 
+function get_cat_posts_count($category_id = 0) {
+	global $conn;
+
+	$posts_count = "SELECT COUNT(*) FROM posts WHERE category_id={$category_id}";
+
+	$posts_count = mysqli_query($conn, $posts_count);
+
+	if( $posts_count ) {
+		$posts_count = mysqli_fetch_assoc($posts_count);
+		return array_shift($posts_count);
+	}
+	else
+		return '';
+}
+
+function get_user_posts_count($user_id = 0) {
+	global $conn;
+
+	$posts_count = "SELECT COUNT(*) FROM posts WHERE user_id={$user_id}";
+
+	$posts_count = mysqli_query($conn, $posts_count);
+
+	if( $posts_count ) {
+		$posts_count = mysqli_fetch_assoc($posts_count);
+		return array_shift($posts_count);
+	}
+	else
+		return '';
+}
+
 function get_category($category_id = 0) {
 	global $conn;
 
@@ -186,9 +273,11 @@ function get_category($category_id = 0) {
 // post_exists(587) // must return false
 // post_exists(3) // must return true
 
-function post_exists($post_id) {
+function post_exists($post_id = 0) {
 
-	return true;
+	if( !get_post($post_id) ) {
+		return false;
+	} else return true;
 }
 
 function get_posts_per_page() {
